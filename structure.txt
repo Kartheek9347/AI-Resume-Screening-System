@@ -1,0 +1,39 @@
+ai_resume_screening_system/
+│
+├── venv/                         # Virtual environment (Python libraries)
+│
+├── app.py                        # Main Flask application (entry point)
+├── requirements.txt              # Project dependencies
+├── config.py                     # Configuration settings
+│
+├── uploads/                      # Uploaded resume PDFs stored temporarily
+│
+├── modules/                      # Core processing modules
+│   │
+│   ├── __init__.py
+│   │
+│   ├── resume_parser.py          # Extract text from PDF resumes
+│   ├── preprocess.py             # Clean and normalize text
+│   ├── skill_extractor.py        # Extract skills from resume text
+│   ├── job_parser.py             # Extract skills from job description
+│   ├── similarity_engine.py      # Compare resume skills with job requirements
+│   └── ranking_engine.py         # Rank candidates based on match score
+│
+├── data/                         # Static skill lists (Python file instead of JSON)
+│   ├── __init__.py
+│   └── skills.py                 # Predefined skill dictionary
+│
+├── templates/                    # Flask HTML templates
+│   │
+│   ├── index.html                # Upload resumes + job description
+│   └── results.html              # Candidate ranking results
+│
+├── static/                       # Frontend assets
+│   │
+│   └── style.css                 # Page styling
+│
+└── utils/                        # Helper utilities
+    │
+    ├── __init__.py
+    ├── file_handler.py           # Handle file upload and saving
+    └── text_utils.py             # Common text processing helpers

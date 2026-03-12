@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Candidate Results</title>
+
+<link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Candidate Ranking</h1>
+
+<div class="job-skills">
+
+<h3>Job Skills Required</h3>
+
+<ul>
+
+{% for skill in job_skills %}
+
+<li>{{ skill }}</li>
+
+{% endfor %}
+
+</ul>
+
+</div>
+
+
+<table>
+
+<thead>
+
+<tr>
+<th>Rank</th>
+<th>Resume</th>
+<th>Skills Detected</th>
+<th>Match Score</th>
+</tr>
+
+</thead>
+
+<tbody>
+
+{% for candidate in candidates %}
+
+<tr>
+
+<td>{{ loop.index }}</td>
+
+<td>{{ candidate.filename }}</td>
+
+<td>
+
+{% for skill in candidate.skills %}
+
+<span class="skill-tag">{{ skill }}</span>
+
+{% endfor %}
+
+</td>
+
+<td class="score">
+
+{{ candidate.score }} %
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</tbody>
+
+</table>
+
+
+<a href="/" class="back-btn">Analyze Another Batch</a>
+
+</div>
+
+</body>
+
+</html>
