@@ -41,20 +41,7 @@ Simple web interface using Flask
 # System Architecture
 
 User Input (Job Description + Resumes)
-↓
-Flask Web Application
-↓
-Resume Parser (Extract Text from PDF)
-↓
-Text Preprocessing (Cleaning & Tokenization)
-↓
-Feature Extraction (Skills / Keywords)
-↓
-Similarity Analysis (AI Matching Model)
-↓
-Candidate Ranking
-↓
-Results Display (Match Score)
+Flask Web Application → Resume Parser (Extract Text from PDF) → Text Preprocessing (Cleaning & Tokenization) → Feature Extraction (Skills / Keywords) → Similarity Analysis (AI Matching Model) → Candidate Ranking → Results Display (Match Score)
 
 # Technologies Used
 
